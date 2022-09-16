@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(32, 37%, 92%);
+}
+
+main {
+    width: 36rem;
+    height: 28rem;
+    display: flex;
+}
+
+/*------------------- Left Section -------------------*/
+
+main .left {
+    width: 18rem;
+    overflow: hidden;
+}
+main .left .mobile-image{
+    display: none;
+}
+main .left .desktop-image {
+    max-width: 100%;
+    height: 100%;
+    border-radius: .8rem 0 0 .8rem;
+    transition: all 1s ease;
+}
+main .left img:hover{
+    transform: scale(1.2);
+}
+/*------------------- Right Section -------------------*/
+main .right {
+    width: 18rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0 .8rem .8rem 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main .right .content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main .right .content .title{
+    letter-spacing: 4px;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+main .right .content h3{
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: hsl(212, 21%, 14%);
+}
+
+main .right .content p{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.4rem;
+}
+main .right .content .price{
+    display: flex;
+    align-items: center;
+}
+main .right .content .price :first-child{
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+main .right .content .price :last-child{
+    padding: 1rem;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+
+main .right .content .btn button{
+    background: none;
+    outline: none;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+main .right .content .btn button:hover{
+    background-color: hsl(150, 100%, 10%);
+    transition: all .4s ease;
+}
+
+@media all and (max-width: 420px){
+
+    main{
+        height: auto;
+        margin: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main .left{
+        width: 100%;
+    }
+    main .left .desktop-image{
+        display: none;
+    }
+    main .left .mobile-image{
+        display: block;
+        width: 100%;
+        border-radius: .8rem .8rem 0 0;
+    }
+    main .right{
+        width: 100%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0 0 .8rem .8rem;
+    }
+    main .right .content{
+        gap: 1rem;
+    }
+}
