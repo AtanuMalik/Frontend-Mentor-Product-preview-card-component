@@ -119,6 +119,7 @@ main .right .content .btn button:hover{
     }
     main .left{
         width: 100%;
+        border-radius: .8rem .8rem 0 0;
     }
     main .left .desktop-image{
         display: none;
@@ -126,7 +127,6 @@ main .right .content .btn button:hover{
     main .left .mobile-image{
         display: block;
         width: 100%;
-        border-radius: .8rem .8rem 0 0;
     }
     main .right{
         width: 100%;
